@@ -15,6 +15,7 @@
         <button id="upload-button">Upload</button>
       </form>
     </div>
+    <div id="image-container"></div>
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -36,8 +37,9 @@
       timeout: 120
     }).done(function(response, status) {
       console.log(response);
+      $("#image-container").html('<img src="' + response + '">');
     }).fail(function() {
-      console.error("error!")
+      console.error("error!");
     });
   };
 
