@@ -10,10 +10,39 @@
       <h1>Hough Transform</h1>
     </header>
     <div>
-      <form action="/upload" method="POST" enctype="multipart/form-data">
+      <form id="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
         <input type="file" name="image">
-        <button>Upload</button>
+        <button id="upload-button">Upload</button>
       </form>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous">
+    </script>
+    <script>
+(function() {
+  'use strict';
+
+  let onSubmit = function(event) {
+    event.preventDefault();
+    var formData = new FormData($("#upload-form")[0]);
+    $.ajax({
+      url: "/upload",
+      type: "post",
+      data: formData,
+      processData: false,
+      contentType: false,
+      timeout: 120
+    }).done(function(response, status) {
+      console.log(response);
+    }).fail(function() {
+      console.error("error!")
+    });
+  };
+
+  $("#upload-form").on("submit", onSubmit);
+})();
+    </script>
   </body>
 </html>
