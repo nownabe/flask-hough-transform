@@ -1,0 +1,6 @@
+Dockerfile
+Procfile
+__pycache__
+runtime.txt
+static/**/*.*
+venv
