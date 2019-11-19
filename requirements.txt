@@ -5,7 +5,7 @@ gunicorn==19.6.0
 itsdangerous==0.24
 Jinja2==2.10.1
 MarkupSafe==0.23
-packaging==16.8
+packaging==19.2
 pyparsing==2.1.10
 six==1.13.0
 Werkzeug==0.16.0
