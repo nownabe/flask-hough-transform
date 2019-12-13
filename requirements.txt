@@ -1,4 +1,4 @@
-appdirs==1.4.0
+appdirs==1.4.3
 click==6.7
 Flask==1.1.1
 gunicorn==20.0.4
