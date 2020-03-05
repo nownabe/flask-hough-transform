@@ -4,7 +4,7 @@ Flask==1.1.1
 gunicorn==20.0.4
 itsdangerous==0.24
 Jinja2==2.11.1
-MarkupSafe==0.23
+MarkupSafe==1.1.1
 packaging==20.3
 pyparsing==2.4.6
 six==1.14.0
